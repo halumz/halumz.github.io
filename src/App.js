@@ -6,7 +6,7 @@ import DownloadPdf from './components/downloadPdf';
 import Attribute from './components/attribute';
 import Title from './components/title';
 import { mainAttributes } from './config';
-import './config/forPdf';
+// import './config/forPdf';
 
 class App extends Component {
   render() {
