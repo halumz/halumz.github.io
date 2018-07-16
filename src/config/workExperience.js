@@ -4,7 +4,7 @@ export default [
     details:
       'A creative agency specializing in building scalable, high performance web & mobile application. Building WordPress Themes & Plugins for Envato.',
     position: 'Software Engineer',
-    start: 'November, 2016',
+    start: 'July, 2016',
     end: 'Present',
     link: 'https://themeforest.net/user/redqteam'
   },
@@ -14,7 +14,7 @@ export default [
       'Zert Interactive mainly deals with android and IOS apps. Among android apps I have worked over 80 projects including live wallpapers, live score streaming, custom ui generator and so on. The base app 4k wallpapers has been installed over 100,000 and still running',
     position: 'Senior Android developer',
     start: 'January, 2016',
-    end: 'October, 2016',
+    end: 'June, 2016',
     link: 'https://play.google.com/store/apps/dev?id=7517071410630168868'
   },
   {

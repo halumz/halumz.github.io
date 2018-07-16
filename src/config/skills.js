@@ -1,7 +1,7 @@
 export default [
   {
     value: 'frontendWeb',
-    title: 'Frontend Web',
+    title: 'Technology',
     options: ['React Js', 'Redux', 'Redux-Saga', 'Reflux', 'JavaScript [ES7]']
   },
   {
@@ -21,13 +21,13 @@ export default [
   },
   {
     value: 'mobileApplication',
-    title: 'Mobile Application',
-    options: ['Android Studio', 'React Native', 'Eclipse']
+    title: 'Ides',
+    options: ['Android Studio'] //, 'React Native', 'Eclipse']
   },
   {
     value: 'dataStore',
-    title: 'Data Store',
-    options: ['MySQL', 'Firebase', 'Firestore']
+    title: 'DBMS',
+    options: ['MySQL', 'Sqlite', 'Firebase', 'Firestore']
   },
   {
     value: 'backendWeb',
@@ -36,7 +36,12 @@ export default [
   },
   {
     value: 'developmentTools',
-    title: 'Development Tools',
-    options: ['Git', 'Gulp', 'Webpack']
+    title: 'Automation Tools',
+    options: ['Gulp', 'Webpack']
+  },
+  {
+    value: 'Versioning',
+    title: 'Versioning',
+    options: ['Git']
   }
 ];
