@@ -6,7 +6,7 @@ import { externalLinks } from '../../config';
 
 export default ({ classes }) => (
   <div className={classes.externalLinks}>
-    {externalLinks.map(({ value, url }, index) => (
+    {externalLinks.map(({ value, imageLink, url }, index) => (
       <Fade left key={index}>
         <a href={url} target="blank">
           <Button
@@ -15,7 +15,11 @@ export default ({ classes }) => (
             size="medium"
             style={{ margin: '5px', padding: '5px' }}
           >
-            <SocialLogo icon={value} size={48} />
+            {imageLink ? (
+              <img alt="#" style={{ width: 38, height: 38 }} src={imageLink} />
+            ) : (
+              <SocialLogo icon={value} size={48} />
+            )}
           </Button>
         </a>
       </Fade>

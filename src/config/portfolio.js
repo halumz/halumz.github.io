@@ -1,14 +1,5 @@
 export default [
   {
-    name: 'Mate - React Redux Material Admin Dashboard',
-    creator: 'Redq Inc.',
-    desc:
-      'A react-redux powered single page material admin dashboard. Used progressive web application pattern, highly optimized for react application.',
-    link:
-      'https://themeforest.net/item/mate-react-redux-material-admin-dashboard/21234776',
-    type: 'React'
-  },
-  {
     name: 'Isomorphic - React Redux Admin Dashboard',
     creator: 'Redq Inc.',
     desc:
@@ -24,6 +15,15 @@ export default [
       'Make searching easy for your customers. Advanced search, filter & grid plugin, powered by react-redux. It can search through post, product, all kind of custom post types, taxonomies, metadata and term metas. It has built in geo box and location searching facility',
     link:
       'https://codecanyon.net/item/reactive-pro-advanced-wordpress-search-filtering-grid/17425763',
+    type: 'React'
+  },
+  {
+    name: 'Mate - React Redux Material Admin Dashboard',
+    creator: 'Redq Inc.',
+    desc:
+      'A react-redux powered single page material admin dashboard. Used progressive web application pattern, highly optimized for react application.',
+    link:
+      'https://themeforest.net/item/mate-react-redux-material-admin-dashboard/21234776',
     type: 'React'
   },
   {

@@ -2,7 +2,7 @@ export default [
   {
     company: 'RedQ Inc.',
     details:
-      'A creative agency specializing in building scalable, high performance web & mobile application. Building WordPress Themes & Plugins for Envato.',
+      'I mainly develop react based apps here. I worked with various modules, restful apis, dashboard and wordpress plugins. I have to taste and correct bugs in their functioning. I collaborated with designers to meet customer expectations and optimized website usability. We have to maintain the team workflow. To complete programming and development tasks of different difficulty levels.',
     position: 'Software Engineer',
     start: 'July, 2016',
     end: 'Present',
@@ -29,7 +29,7 @@ export default [
   {
     company: 'TechCare Ltd.',
     details:
-      'A start up for ui/ux design, mobile app development and web app development',
+      'A start up for ui/ux design, mobile app development and web app development. I worked as ux developer and android apps development.',
     position: 'Android developer',
     start: '2012',
     end: '2014',

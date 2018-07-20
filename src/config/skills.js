@@ -29,19 +29,24 @@ export default [
     title: 'DBMS',
     options: ['MySQL', 'Sqlite', 'Firebase', 'Firestore']
   },
-  {
-    value: 'backendWeb',
-    title: 'Backend Web',
-    options: ['Python', 'PHP', 'Express']
-  },
+  // {
+  //   value: 'backendWeb',
+  //   title: 'Backend Web',
+  //   options: ['Python', 'PHP', 'Express']
+  // },
   {
     value: 'developmentTools',
     title: 'Automation Tools',
-    options: ['Gulp', 'Webpack']
+    options: ['Webpack'] //'Gulp',
   },
   {
     value: 'Versioning',
     title: 'Versioning',
     options: ['Git']
+  },
+  {
+    value: 'ProjectManagement',
+    title: 'Project Management',
+    options: ['Scrum']
   }
 ];

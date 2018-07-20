@@ -1,4 +1,5 @@
 import aboutMe from './aboutMe';
+import objectives from './objectives';
 import portfolio from './portfolio';
 import workExperience from './workExperience';
 import education from './education';
@@ -8,6 +9,7 @@ import externalLinks from './externalLinks';
 
 export default {
   aboutMe,
+  objectives,
   portfolio,
   workExperience,
   education,
