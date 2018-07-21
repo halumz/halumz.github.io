@@ -17,7 +17,7 @@ const myself = {
 const mainAttributes = [
   {
     value: 'aboutMe',
-    title: 'Personal StateMent'
+    title: 'Personal Statement'
   },
   {
     value: 'objectives',
