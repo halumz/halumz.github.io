@@ -41,9 +41,9 @@ export default ({ classes }) => {
             {myself.phone}
           </a>
         </Typography>
-        <Typography component="p" align="center" className={classes.titleSub}>
+        {/* <Typography component="p" align="center" className={classes.titleSub}>
           {myself.address}
-        </Typography>
+        </Typography> */}
       </Paper>
     </Pulse>
   );

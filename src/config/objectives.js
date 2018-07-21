@@ -1,6 +1,6 @@
 export default [
   {
     txt:
-      'Seeking a position in a company where I can apply my software engineering experience specially on React JS and logic related problems and contribute to the development process both as an individual and a good team player.'
+      'Seeking a challenging position on a company where I can use my existing knowledge to collaborate with the team to achieve greater goal as a team player maintaining personal improvement.'
   }
 ];

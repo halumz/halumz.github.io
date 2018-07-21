@@ -2,7 +2,7 @@ export default [
   {
     company: 'RedQ Inc.',
     details:
-      'I mainly develop react based apps here. I worked with various modules, restful apis, dashboard and wordpress plugins. I have to test and correct bugs in their functioning. I collaborated with designers to meet customer expectations and optimized website usability. We have to maintain the team workflow. To complete programming and development tasks of different difficulty levels.',
+      'Major responsibilities were to build react based apps, modular solutions, restful APIs, dashboard, Wordpress plugins. Have to maintain the team workflow to complete programming and development tasks of different difficulty levels.',
     position: 'Software Engineer',
     start: 'July, 2016',
     end: 'Present',
@@ -11,7 +11,7 @@ export default [
   {
     company: 'Zert Interactive',
     details:
-      'Zert Interactive mainly deals with android and IOS apps. Among android apps I have worked over 80 projects including live wallpapers, live score streaming, custom ui generator and so on. The base app 4k wallpapers has been installed over 100,000 and still running',
+      'Zert Interactive mainly deals with android apps. I have worked over 80 projects including live wallpapers, live score streaming, custom ui generator etc.',
     position: 'Senior Android developer',
     start: 'January, 2016',
     end: 'June, 2016',
