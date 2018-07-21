@@ -2,7 +2,7 @@ export default [
   {
     company: 'RedQ Inc.',
     details:
-      'I mainly develop react based apps here. I worked with various modules, restful apis, dashboard and wordpress plugins. I have to taste and correct bugs in their functioning. I collaborated with designers to meet customer expectations and optimized website usability. We have to maintain the team workflow. To complete programming and development tasks of different difficulty levels.',
+      'I mainly develop react based apps here. I worked with various modules, restful apis, dashboard and wordpress plugins. I have to test and correct bugs in their functioning. I collaborated with designers to meet customer expectations and optimized website usability. We have to maintain the team workflow. To complete programming and development tasks of different difficulty levels.',
     position: 'Software Engineer',
     start: 'July, 2016',
     end: 'Present',

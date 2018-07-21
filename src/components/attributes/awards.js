@@ -7,7 +7,7 @@ export default ({ classes }) =>
   awards.map(({ txt }, index) => (
     <Fade bottom key={index}>
       <Typography className={classes.aboutMe} align="justify">
-        {' - '}
+        {' -> '}
         {txt}
       </Typography>
     </Fade>

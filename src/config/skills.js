@@ -21,7 +21,7 @@ export default [
   },
   {
     value: 'mobileApplication',
-    title: 'Ides',
+    title: 'IDE',
     options: ['Android Studio'] //, 'React Native', 'Eclipse']
   },
   {
