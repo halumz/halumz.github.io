@@ -2,7 +2,7 @@ export default [
   {
     value: 'frontendWeb',
     title: 'Technology',
-    options: ['React Js', 'Redux', 'Redux-Saga', 'Reflux', 'JavaScript [ES7]']
+    options: ['React Js', 'Redux', 'Redux-Saga', 'Reflux', 'JavaScript [ES7]', 'Spring Boot']
   },
   {
     value: 'api',
