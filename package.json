@@ -26,8 +26,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm-run-all build-css build-js",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "gh-pages -d build",
+    "deploy": "npm-run-all  build predeploy"
   },
   "browserslist": {
     "production": [
