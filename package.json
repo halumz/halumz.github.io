@@ -27,7 +27,7 @@
     "build": "npm-run-all build-css build-js",
     "eject": "react-scripts eject",
     "predeploy": "gh-pages -d build",
-    "deploy": "npm-run-all build predeploy"
+    "deploy": "yarn build && yarn predeploy"
   },
   "browserslist": {
     "production": [
