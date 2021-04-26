@@ -24,9 +24,10 @@
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start": "npm-run-all -p watch-css start-js",
+    "build": "npm-run-all build-css build-js",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
