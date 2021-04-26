@@ -1,20 +1,17 @@
 import React from 'react';
-import Paper from 'material-ui/Paper';
-import Typography from 'material-ui/Typography';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import Pulse from 'react-reveal/Pulse';
 import { myself } from '../config';
-// profession: 'Software Engineer',
-// address: 'Flat-5b, 85B/12A, Dhanmondi,Dhaka, BANGLADESH',
-// phone: '+880 17266 34711',
-// email: 'mashuksadman@gmail.com'
+
 export default ({ classes }) => {
   return (
     <Pulse>
       <Paper className={classes.title}>
         <Typography
-          className={classes.titleHead}
+          className={`${classes.titleHead} titleHead`}
           variant="title"
-          component="h3"
+          component="h1"
           align="center"
         >
           {myself.name}
@@ -41,9 +38,6 @@ export default ({ classes }) => {
             {myself.phone}
           </a>
         </Typography>
-        {/* <Typography component="p" align="center" className={classes.titleSub}>
-          {myself.address}
-        </Typography> */}
       </Paper>
     </Pulse>
   );

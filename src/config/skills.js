@@ -2,46 +2,41 @@ export default [
   {
     value: 'frontendWeb',
     title: 'Technology',
-    options: ['React Js', 'Redux', 'Redux-Saga', 'Reflux', 'JavaScript [ES7]', 'Spring Boot']
+    options: ['React Js', 'Redux', 'JavaScript [ES7]', 'Spring Boot', 'Scrapy']
+  },
+  {
+    value: 'mlTools',
+    title: 'Machine Learning Tools',
+    options: ['Amazon Rekoginition', 'Microsoft Azure Machine Learning']
   },
   {
     value: 'api',
     title: 'API',
-    options: [
-      'FabricJs',
-      'Google',
-      'Algoila',
-      'Facebook',
-      'Twitter',
-      'Github',
-      'Youtube',
-      'Firebase',
-      'Auth0'
-    ]
+    options: ['FabricJs', 'Amazon Web Services', 'Algoila', 'Firebase', 'Auth0']
+  },
+  {
+    value: 'smApi',
+    title: 'Social Media API',
+    options: ['Google', 'Facebook', 'Twitter', 'Github', 'Youtube']
   },
   {
     value: 'mobileApplication',
     title: 'IDE',
-    options: ['Android Studio'] //, 'React Native', 'Eclipse']
+    options: ['Android Studio', 'Visual Code', 'IntellIJ']
   },
   {
     value: 'dataStore',
     title: 'DBMS',
-    options: ['MySQL', 'Sqlite', 'Firebase', 'Firestore']
+    options: ['MySQL', 'Sqlite', 'Postgres', 'Firestore']
   },
-  // {
-  //   value: 'backendWeb',
-  //   title: 'Backend Web',
-  //   options: ['Python', 'PHP', 'Express']
-  // },
   {
     value: 'developmentTools',
     title: 'Automation Tools',
-    options: ['Webpack'] //'Gulp',
+    options: ['Webpack']
   },
   {
     value: 'Versioning',
-    title: 'Versioning',
+    title: 'Version Controlling',
     options: ['Git']
   },
   {

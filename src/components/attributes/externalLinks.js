@@ -1,7 +1,7 @@
 import React from 'react';
 import SocialLogo from 'social-logos';
 import Fade from 'react-reveal/Fade';
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 import { externalLinks } from '../../config';
 
 export default ({ classes }) => (

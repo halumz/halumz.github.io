@@ -1,6 +1,6 @@
 import React from 'react';
-import Typography from 'material-ui/Typography';
-import Paper from 'material-ui/Paper';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 import Fade from 'react-reveal/Fade';
 import { workExperience } from '../../config';
 

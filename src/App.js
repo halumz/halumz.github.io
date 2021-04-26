@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { Sticky, StickyContainer } from 'react-sticky';
 import appStyles from './appStyle';
 import DownloadPdf from './components/downloadPdf';
 import Attribute from './components/attribute';
 import Title from './components/title';
 import { mainAttributes } from './config';
-// import './config/forPdf';
 
 class App extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.app} style={{ padding: 0 }}>
-        <StickyContainer style={{ height: '100vh', overflowY: 'auto' }}>
+      <div className={classes.app}>
+        <StickyContainer className="app-sticky-container">
           <Title classes={classes} />
           {mainAttributes.map(attribute => (
             <Attribute {...attribute} key={attribute.value} classes={classes} />

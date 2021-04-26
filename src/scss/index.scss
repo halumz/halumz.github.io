@@ -1,0 +1,78 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.app {
+    position: relative;
+    background: #efefef;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.app-sticky-container {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.titleHead {
+    font-size: 1.2rem;
+}
+
+.downloadPdf {
+    position: absolute;
+    background: #f50057;
+    border-radius: 50%;
+    padding: 12px !important;
+    bottom: 35px !important;
+    right: 20px !important;
+    opacity: 0.6;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    span {
+        font-size: 2em;
+        color: white;
+    }
+}
+
+.title {
+    padding: 10px;
+}
+
+.papper {
+    margin-top: 6px;
+}
+
+.papperHeader {
+    margin-bottom: 6px;
+    background: #f7f7f7;
+}
+
+.subPaper {
+    padding: 5px;
+    margin: 15px;
+    background: #f7f7f7;
+}
+
+.attributeBody {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.externalLinks {
+    display: flex;
+    justify-content: center;
+}

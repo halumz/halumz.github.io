@@ -2,8 +2,8 @@ export default [
   {
     company: 'Cefalo',
     details:
-      'Develop graphics archiving web application. Frontend is developed using REACT and spring boot is used in backend.',
-    position: 'Software Engineer',
+      'Develop graphics archiving web application. Frontend is developed using REACT and spring boot is used in backend. Here I work with different technologies like amazon web services. We are implementing artificial intelligence using Amazon Rekognition.',
+    position: 'Senior Software Engineer',
     start: 'November, 2018',
     end: 'Present',
     link: 'https://www.cefalo.com/en/'

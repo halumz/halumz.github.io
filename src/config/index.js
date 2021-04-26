@@ -9,11 +9,12 @@ import externalLinks from './externalLinks';
 
 const myself = {
   name: 'Mashuk Sadman',
-  profession: 'Software Engineer',
+  profession: 'Senior Software Engineer',
   address: 'Flat-b5, 85B/12A, Dhanmondi, Dhaka, BANGLADESH',
   phone: '+88 01726 634 711',
   email: 'mashuksadman@gmail.com'
 };
+
 const mainAttributes = [
   {
     value: 'aboutMe',
@@ -58,6 +59,7 @@ const languages = [
   'XML & JSON',
   'MySQL'
 ];
+
 export {
   myself,
   mainAttributes,
