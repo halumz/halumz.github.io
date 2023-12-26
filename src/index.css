@@ -47,8 +47,9 @@ a[title]:hover::after {
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
+  user-select: none !important;
 }
 
-a:hover {
-  background: inherit;
+a {
+  -webkit-tap-highlight-color: transparent;
 }
