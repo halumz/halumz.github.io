@@ -19,7 +19,7 @@ const ThemeSwitcher = ({
     <button
       onClick={updateTheme}
       title={theme === 'light' ? 'Dark mode' : 'Light mode'}
-      className="fill-colorText fixed right-5 z-20 rounded-full lg:right-10"
+      className="fixed right-5 z-20 rounded-full fill-colorText lg:right-10"
       style={{ top: (headerHeight - iconSize) / 2 }}
     >
       <SwitcherIcon

@@ -15,7 +15,7 @@ const DownloadPdf = () => {
     <button
       onClick={onClick}
       title="Download PDF"
-      className="bg-colorText fixed bottom-5 z-20 right-5 rounded-full p-3 lg:bottom-10 lg:right-10"
+      className="fixed bottom-5 right-5 z-20 rounded-full bg-colorText p-3 lg:bottom-10 lg:right-10"
     >
       <DownloadIcon
         width={30}

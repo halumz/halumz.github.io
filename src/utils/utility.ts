@@ -5,7 +5,7 @@ const saveLocalStorage = (name: string, value: string): void => {
   localStorage.setItem(name, value);
 };
 
-const getLocalStorage = (name: string, defaultValue: string = ""): string => {
+const getLocalStorage = (name: string, defaultValue: string = ''): string => {
   const value = localStorage.getItem(name);
   if (!value) {
     return defaultValue;

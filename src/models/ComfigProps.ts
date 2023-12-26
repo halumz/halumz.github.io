@@ -1,4 +1,4 @@
-import ConfigModel from "./ConfigModel";
+import ConfigModel from './ConfigModel';
 
 interface ConfigProps extends ConfigModel {
   value: string;

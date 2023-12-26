@@ -1,8 +1,8 @@
-import Fade from "react-reveal/Fade";
-import CardHolder from "./CardHolder";
-import Card from "./Card";
+import Fade from 'react-reveal/Fade';
+import CardHolder from './CardHolder';
+import Card from './Card';
 
-import ConfigurationModel from "../models/ConfigurationModel";
+import ConfigurationModel from '../models/ConfigurationModel';
 
 const Configuration = ({
   ComponentName,
@@ -18,14 +18,14 @@ const Configuration = ({
     </Card>
     <div
       className={`${
-        value === "externalLinks" && "flex justify-center gap-0.5 lg:gap-1 py-2"
-      } ${showBox && "py-2"}`}
+        value === 'externalLinks' && 'flex justify-center gap-0.5 py-2 lg:gap-1'
+      } ${showBox && 'py-2'}`}
     >
       {config.map((singleConfig, index) => (
         <Fade key={index} bottom duration={600}>
           <CardHolder
             showBox={showBox}
-            isLink={value === "portfolio" || value === "workExperience"}
+            isLink={value === 'portfolio' || value === 'workExperience'}
           >
             <ComponentName
               value={value}

@@ -1,4 +1,4 @@
-import ConfigProps from "../models/ComfigProps";
+import ConfigProps from '../models/ComfigProps';
 
 const Paragraph = ({ details, showArrow }: ConfigProps) => (
   <div className="flex text-justify">

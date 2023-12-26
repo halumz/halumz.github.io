@@ -1,9 +1,9 @@
-import ConfigProps from "../models/ComfigProps";
+import ConfigProps from '../models/ComfigProps';
 
 const ExternalLinkComponent = ({ ImageLink, link, title }: ConfigProps) =>
   ImageLink && (
     <a href={link} target="blank" title={title} className="py-10">
-      {typeof ImageLink === "string" ? (
+      {typeof ImageLink === 'string' ? (
         <img
           alt="#"
           src={ImageLink}

@@ -1,5 +1,5 @@
-import ConfigProps from "../models/ComfigProps";
-import CardHeader from "./CardHolder";
+import ConfigProps from '../models/ComfigProps';
+import CardHeader from './CardHolder';
 
 const WorkExperience = ({
   link,

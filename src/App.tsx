@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-primary text-colorText flex w-full flex-col items-center justify-center pb-5">
+    <div className="flex w-full flex-col items-center justify-center bg-primary pb-5 text-colorText">
       <div
         ref={headerRef}
         className="fixed left-0 top-0 z-10 flex w-screen flex-col items-center gap-1 pb-2"

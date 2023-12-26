@@ -1,11 +1,11 @@
-import Pulse from "react-reveal/Pulse";
-import Card from "./Card";
-import { myself } from "../configs";
+import Pulse from 'react-reveal/Pulse';
+import Card from './Card';
+import { myself } from '../configs';
 
 const Header = () => (
   <Pulse>
     <Card className="flex w-screen flex-col items-center gap-1 py-2">
-      <p className="text-lg font-bold text-center">{myself.name}</p>
+      <p className="text-center text-lg font-bold">{myself.name}</p>
       <p className="text-center">{myself.profession}</p>
       {/* <p>{myself.location}</p> */}
       <p className="text-center">
@@ -16,12 +16,12 @@ const Header = () => (
         >
           {myself.email}
         </a>
-        <span className="hidden lg:inline-block lg: px-2">|</span>
+        <span className="lg: hidden px-2 lg:inline-block">|</span>
         <br className="lg:hidden" />
         <a
           target="blank"
           className="hover:text-blue-500"
-          href={`tel:${myself.phone.replace(" ", "")}`}
+          href={`tel:${myself.phone.replace(' ', '')}`}
         >
           {myself.phone}
         </a>

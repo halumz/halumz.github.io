@@ -1,8 +1,8 @@
-import jsPDF, { TextOptionsLight } from "jspdf";
-import { myself, configuration } from "../configs";
-import ConfigModel from "../models/ConfigModel";
+import jsPDF, { TextOptionsLight } from 'jspdf';
+import { myself, configuration } from '../configs';
+import ConfigModel from '../models/ConfigModel';
 
-const fontFamily = "Roboto";
+const fontFamily = 'Roboto';
 const pageYOffset = 285;
 const x = 20;
 let y = 20;
@@ -14,8 +14,8 @@ enum FontSizes {
 }
 
 enum FontStyles {
-  bold = "bold",
-  normal = "normal",
+  bold = 'bold',
+  normal = 'normal',
 }
 
 enum Spaces {
@@ -40,7 +40,7 @@ const addNewPage = (cv: jsPDF) => {
 const createTextOptions = (cv: jsPDF): TextOptionsLight => {
   const pageWidth = cv.internal.pageSize.getWidth();
   return {
-    align: "justify",
+    align: 'justify',
     maxWidth: pageWidth - 40,
   };
 };
@@ -48,18 +48,18 @@ const createTextOptions = (cv: jsPDF): TextOptionsLight => {
 const addText = (
   cv: jsPDF,
   text: string | undefined,
-  options?: AddTextOptions,
+  options?: AddTextOptions
 ) => {
   const {
     fontStyle = FontStyles.normal,
     fontSize = FontSizes.default,
-    url = "",
+    url = '',
     XAxis = x,
     sameLine = false,
     underline = false,
   } = options || {};
   const textOptions = createTextOptions(cv);
-  const dimension = cv.getTextDimensions(text || "", {
+  const dimension = cv.getTextDimensions(text || '', {
     ...textOptions,
     fontSize,
   });
@@ -67,12 +67,12 @@ const addText = (
   cv.setFontSize(fontSize);
   cv.setFont(fontFamily, fontStyle);
   if (url) {
-    cv.textWithLink(text || "", XAxis, y, { url });
+    cv.textWithLink(text || '', XAxis, y, { url });
   } else {
-    cv.text(text || "", XAxis, y, textOptions);
+    cv.text(text || '', XAxis, y, textOptions);
   }
   if (underline) {
-    cv.line(XAxis, y + 1, XAxis + cv.getTextWidth(text || "") + 1, y + 1);
+    cv.line(XAxis, y + 1, XAxis + cv.getTextWidth(text || '') + 1, y + 1);
   }
   if (!sameLine) {
     y += Math.ceil(dimension.h) + 2;
@@ -110,7 +110,7 @@ const createMySelf = (cv: jsPDF) => {
 const setConfigParagraph = (
   cv: jsPDF,
   data: ConfigModel[],
-  showArrow?: boolean,
+  showArrow?: boolean
 ) => {
   data.forEach((item) => {
     if (!item.details) {
@@ -128,7 +128,7 @@ const setConfigSkill = (cv: jsPDF, data: ConfigModel[]) => {
       fontStyle: FontStyles.bold,
       sameLine: true,
     });
-    addText(cv, options?.join(", "), {
+    addText(cv, options?.join(', '), {
       XAxis: x + cv.getTextWidth(titleText),
     });
   });
@@ -185,7 +185,7 @@ const setConfigExternalLinks = (cv: jsPDF, data: ConfigModel[]) => {
 };
 
 const createCV = (): jsPDF => {
-  const cv = new jsPDF("p", "mm", [297, 210]);
+  const cv = new jsPDF('p', 'mm', [297, 210]);
   cv.setFont(fontFamily);
   createMySelf(cv);
 
@@ -197,25 +197,25 @@ const createCV = (): jsPDF => {
       underline: true,
     });
     switch (value) {
-      case "personalInformation":
-      case "objectives":
-      case "awards":
+      case 'personalInformation':
+      case 'objectives':
+      case 'awards':
         setConfigParagraph(cv, config, showArrow);
         break;
-      case "skills":
+      case 'skills':
         setConfigSkill(cv, config);
         break;
-      case "workExperience":
+      case 'workExperience':
         setConfigWorkExperience(cv, config);
         addNewPage(cv);
         break;
-      case "portfolio":
+      case 'portfolio':
         setConfigPortfolio(cv, config);
         break;
-      case "education":
+      case 'education':
         setConfigEducation(cv, config);
         break;
-      case "externalLinks":
+      case 'externalLinks':
         setConfigExternalLinks(cv, config);
         break;
       default:
