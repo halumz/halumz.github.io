@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Roboto;
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+  background-color: var(--color-primary);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.light {
+  --color-primary: #e1e1e1;
+  --color-secondary: #f0f0f0;
+  --color-text: #1d1d1d;
+  --color-bgHolder: #f5f5f5;
+}
+
+.dark {
+  --color-primary: #212121;
+  --color-secondary: #151515;
+  --color-text: #fff;
+  --color-bgHolder: #424242;
+}
+
+button[title]:hover::after,
+a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: -10%;
+  bottom: 70%;
+  width: fit-content;
+  color: var(--color-primary);
+  background: var(--color-text);
+  padding: 2px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+* {
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+a:hover {
+  background: inherit;
+}
