@@ -3,9 +3,10 @@ import { myself, configuration } from '../configs';
 import ConfigModel from '../models/ConfigModel';
 
 const fontFamily = 'Roboto';
+const pageInitYOffset = 20;
+const pageInitXOffset = 20;
 const pageYOffset = 285;
-const x = 20;
-let y = 20;
+let y = pageInitYOffset;
 
 enum FontSizes {
   name = 14,
@@ -34,7 +35,7 @@ interface AddTextOptions {
 
 const addNewPage = (cv: jsPDF) => {
   cv.addPage();
-  y = 20;
+  y = pageInitYOffset;
 };
 
 const createTextOptions = (cv: jsPDF): TextOptionsLight => {
@@ -54,7 +55,7 @@ const addText = (
     fontStyle = FontStyles.normal,
     fontSize = FontSizes.default,
     url = '',
-    XAxis = x,
+    XAxis = pageInitXOffset,
     sameLine = false,
     underline = false,
   } = options || {};
@@ -103,7 +104,7 @@ const createMySelf = (cv: jsPDF) => {
   });
   addText(cv, ` | ${myself.phone}`, {
     url: `tel:${myself.phone}`,
-    XAxis: x + cv.getTextWidth(myself.email),
+    XAxis: pageInitXOffset + cv.getTextWidth(myself.email),
   });
 };
 
@@ -122,22 +123,23 @@ const setConfigParagraph = (
 };
 
 const setConfigSkill = (cv: jsPDF, data: ConfigModel[]) => {
-  data.forEach(({ title, options }) => {
+  data.forEach(({ title, skillSet }) => {
     const titleText = `${title}: `;
     addText(cv, titleText, {
       fontStyle: FontStyles.bold,
       sameLine: true,
     });
-    addText(cv, options?.join(', '), {
-      XAxis: x + cv.getTextWidth(titleText),
+    addText(cv, skillSet?.join(', '), {
+      XAxis: pageInitXOffset + cv.getTextWidth(titleText),
     });
   });
+  addEmptySpace(cv);
 };
 
 const setConfigWorkExperience = (cv: jsPDF, data: ConfigModel[]) => {
-  data.forEach(({ position, company, details, period, link }) => {
+  data.forEach(({ workRole, organization, details, period, link }) => {
     addEmptySpace(cv, Spaces.portion);
-    addText(cv, `${position} | ${company}`, {
+    addText(cv, `${workRole} | ${organization}`, {
       fontStyle: FontStyles.bold,
       url: link,
       underline: true,
@@ -148,8 +150,8 @@ const setConfigWorkExperience = (cv: jsPDF, data: ConfigModel[]) => {
 };
 
 const setConfigPortfolio = (cv: jsPDF, data: ConfigModel[]) => {
-  data.forEach(({ title, creator, details, link }) => {
-    const text = creator ? `${title} | ${creator}` : title;
+  data.forEach(({ title, organization, details, link }) => {
+    const text = organization ? `${title} | ${organization}` : title;
     addEmptySpace(cv, Spaces.portion);
     addText(cv, text, {
       fontStyle: FontStyles.bold,
@@ -160,13 +162,14 @@ const setConfigPortfolio = (cv: jsPDF, data: ConfigModel[]) => {
   });
 };
 const setConfigEducation = (cv: jsPDF, data: ConfigModel[]) => {
-  data.forEach(({ title, period, result, institution }) => {
+  data.forEach(({ title, period, result, organization }) => {
     addEmptySpace(cv, Spaces.portion);
-    addText(cv, `${title} | ${institution}`, {
+    addText(cv, `${title} | ${organization}`, {
       fontStyle: FontStyles.bold,
     });
     addText(cv, `${period} - ${result}`);
   });
+  addEmptySpace(cv);
 };
 
 const setConfigExternalLinks = (cv: jsPDF, data: ConfigModel[]) => {
@@ -178,7 +181,7 @@ const setConfigExternalLinks = (cv: jsPDF, data: ConfigModel[]) => {
     });
     addText(cv, link, {
       url: link,
-      XAxis: x + cv.getTextWidth(titleText),
+      XAxis: pageInitXOffset + cv.getTextWidth(titleText),
       underline: true,
     });
   });
@@ -189,39 +192,44 @@ const createCV = (): jsPDF => {
   cv.setFont(fontFamily);
   createMySelf(cv);
 
-  configuration.forEach(({ value, title, config, showArrow }) => {
-    addEmptySpace(cv);
-    addText(cv, title, {
-      fontStyle: FontStyles.bold,
-      fontSize: FontSizes.title,
-      underline: true,
-    });
-    switch (value) {
-      case 'personalInformation':
-      case 'objectives':
-      case 'awards':
-        setConfigParagraph(cv, config, showArrow);
-        break;
-      case 'skills':
-        setConfigSkill(cv, config);
-        break;
-      case 'workExperience':
-        setConfigWorkExperience(cv, config);
+  configuration.forEach(
+    ({ value, title, config, showArrow, addNewPageInPdf }) => {
+      addEmptySpace(cv);
+      addText(cv, title, {
+        fontStyle: FontStyles.bold,
+        fontSize: FontSizes.title,
+        underline: true,
+      });
+      switch (value) {
+        case 'personalInformation':
+        case 'objectives':
+        case 'awards':
+          setConfigParagraph(cv, config, showArrow);
+          break;
+        case 'skills':
+          setConfigSkill(cv, config);
+          break;
+        case 'workExperience':
+          setConfigWorkExperience(cv, config);
+          break;
+        case 'portfolio':
+          setConfigPortfolio(cv, config);
+          break;
+        case 'education':
+          setConfigEducation(cv, config);
+          break;
+        case 'externalLinks':
+          setConfigExternalLinks(cv, config);
+          break;
+        default:
+          break;
+      }
+
+      if (addNewPageInPdf && y > pageInitYOffset) {
         addNewPage(cv);
-        break;
-      case 'portfolio':
-        setConfigPortfolio(cv, config);
-        break;
-      case 'education':
-        setConfigEducation(cv, config);
-        break;
-      case 'externalLinks':
-        setConfigExternalLinks(cv, config);
-        break;
-      default:
-        break;
+      }
     }
-  });
+  );
   return cv;
 };
 

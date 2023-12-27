@@ -9,10 +9,12 @@ body {
   background-color: var(--color-primary);
 }
 
+/* remove scrollbar */
 body::-webkit-scrollbar {
   display: none;
 }
 
+/* add theme specific colors */
 .light {
   --color-primary: #e1e1e1;
   --color-secondary: #f0f0f0;
@@ -27,12 +29,13 @@ body::-webkit-scrollbar {
   --color-bgHolder: #424242;
 }
 
+/* add basic transition for theme change */
 button[title]:hover::after,
 a[title]:hover::after {
   content: attr(title);
   position: absolute;
   left: -10%;
-  bottom: 70%;
+  bottom: 100%;
   width: fit-content;
   color: var(--color-primary);
   background: var(--color-text);
@@ -43,6 +46,12 @@ a[title]:hover::after {
   opacity: 0.8;
 }
 
+button[title]:hover::after {
+  bottom: 120%;
+  left: -100% !important;
+}
+
+/* add basic transition for theme change */
 * {
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
@@ -50,6 +59,7 @@ a[title]:hover::after {
   user-select: none !important;
 }
 
+/* remove tap highlight on mobile */
 a {
   -webkit-tap-highlight-color: transparent;
 }

@@ -1,12 +1,12 @@
 import ConfigProps from '../models/ComfigProps';
 
-const Skill = ({ title, options }: ConfigProps) => (
-  <p key={title}>
+const Skill = ({ title, skillSet }: ConfigProps) => (
+  <p key={title} className="text-justify">
     <strong className="pr-2">
       {title}
       {':'}
     </strong>
-    {options?.join(', ')}
+    {skillSet?.join(', ')}
   </p>
 );
 

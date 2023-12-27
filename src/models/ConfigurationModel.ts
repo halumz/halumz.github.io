@@ -5,11 +5,12 @@ import ConfigProps from './ComfigProps';
 interface ConfigurationModel {
   value: string;
   title: string;
-  showBox?: boolean;
-  showArrow?: boolean;
-  hideInApp?: boolean;
   config: ConfigModel[];
   ComponentName: FunctionComponent<ConfigProps>;
+  showBox?: boolean; // show box over the component
+  showArrow?: boolean; // show arrow before the paragraph
+  hideInApp?: boolean; // hide in app
+  addNewPageInPdf?: boolean; // add new page after the component in pdf
 }
 
 export default ConfigurationModel;

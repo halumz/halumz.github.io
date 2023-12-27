@@ -3,15 +3,15 @@ import CardHeader from './CardHolder';
 
 const WorkExperience = ({
   link,
-  company,
+  organization,
   details,
-  position,
+  workRole,
   period,
 }: ConfigProps) => (
-  <CardHeader key={company}>
+  <CardHeader key={organization}>
     <a target="blank" href={link}>
       <p>
-        <strong>{`${position} | ${company}`}</strong>
+        <strong>{`${workRole} | ${organization}`}</strong>
       </p>
       <p>{period}</p>
       <p className="text-justify">{details}</p>

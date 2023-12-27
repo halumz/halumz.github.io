@@ -1,12 +1,12 @@
 import ConfigProps from '../models/ComfigProps';
 import CardHeader from './CardHolder';
 
-const Education = ({ title, period, result, institution }: ConfigProps) => (
+const Education = ({ title, period, result, organization }: ConfigProps) => (
   <CardHeader key={title}>
     <p>
       <strong>{title}</strong>
       {' | '}
-      {institution}
+      {organization}
     </p>
     <p>
       {period}

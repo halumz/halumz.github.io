@@ -4,17 +4,23 @@ const skills: ConfigModel[] = [
   {
     details: 'frontendWeb',
     title: 'Technology',
-    options: ['React Js', 'Redux', 'JavaScript [ES7]', 'Spring Boot', 'Scrapy'],
+    skillSet: [
+      'React Js',
+      'Redux',
+      'JavaScript [ES7]',
+      'Spring Boot',
+      'Scrapy',
+    ],
   },
   {
     details: 'mlTools',
     title: 'Machine Learning Tools',
-    options: ['Amazon Rekoginition', 'Microsoft Azure Machine Learning'],
+    skillSet: ['Amazon Rekoginition', 'Microsoft Azure Machine Learning'],
   },
   {
     details: 'api',
     title: 'API',
-    options: [
+    skillSet: [
       'FabricJs',
       'Amazon Web Services',
       'Algoila',
@@ -25,32 +31,32 @@ const skills: ConfigModel[] = [
   {
     details: 'smApi',
     title: 'Social Media API',
-    options: ['Google', 'Facebook', 'Twitter', 'Github', 'Youtube'],
+    skillSet: ['Google', 'Facebook', 'Twitter', 'Github', 'Youtube'],
   },
   {
     details: 'mobileApplication',
     title: 'IDE',
-    options: ['Android Studio', 'Visual Code', 'IntellIJ'],
+    skillSet: ['Android Studio', 'Visual Code', 'IntellIJ'],
   },
   {
     details: 'dataStore',
     title: 'DBMS',
-    options: ['MySQL', 'Sqlite', 'Postgres', 'Firestore'],
+    skillSet: ['MySQL', 'Sqlite', 'Postgres', 'Firestore'],
   },
   {
     details: 'developmentTools',
     title: 'Automation Tools',
-    options: ['Webpack'],
+    skillSet: ['Webpack'],
   },
   {
     details: 'Versioning',
     title: 'Version Controlling',
-    options: ['Git'],
+    skillSet: ['Git'],
   },
   {
     details: 'ProjectManagement',
     title: 'Project Management',
-    options: ['Scrum'],
+    skillSet: ['Scrum'],
   },
 ];
 

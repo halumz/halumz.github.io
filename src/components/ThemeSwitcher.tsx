@@ -1,6 +1,7 @@
 import ThemeIcon from '../assets/img/themeSwitcher.svg?react';
 import ThemeDarkIcon from '../assets/img/sun.svg?react';
 import { iconSize } from './DownloadPdf';
+import { Slide } from 'react-awesome-reveal';
 
 interface ThemeSwitcherProps {
   theme: string;
@@ -22,11 +23,13 @@ const ThemeSwitcher = ({
       className="fixed right-5 z-20 rounded-full fill-colorText lg:right-10"
       style={{ top: (headerHeight - iconSize) / 2 }}
     >
-      <SwitcherIcon
-        width={iconSize}
-        height={iconSize}
-        className="fill-colorText transition-opacity hover:opacity-60"
-      />
+      <Slide direction="down">
+        <SwitcherIcon
+          width={iconSize}
+          height={iconSize}
+          className="fill-colorText transition-opacity hover:opacity-60"
+        />
+      </Slide>
     </button>
   );
 };

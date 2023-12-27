@@ -49,6 +49,7 @@ const configuration: ConfigurationModel[] = [
     ComponentName: WorkExperience,
     config: workExperience,
     showBox: true,
+    addNewPageInPdf: true,
   },
   {
     value: 'portfolio',
@@ -63,6 +64,7 @@ const configuration: ConfigurationModel[] = [
     ComponentName: Paragraph,
     config: awards,
     showArrow: true,
+    addNewPageInPdf: true,
   },
   {
     value: 'education',

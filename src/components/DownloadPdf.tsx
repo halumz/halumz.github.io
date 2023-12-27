@@ -1,4 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
+import { Slide } from 'react-awesome-reveal';
 import DownloadIcon from '../assets/img/download.svg?react';
 import createCV from '../utils/createCV';
 
@@ -12,17 +13,21 @@ const DownloadPdf = () => {
   };
 
   return (
-    <button
-      onClick={onClick}
-      title="Download PDF"
-      className="fixed bottom-5 right-5 z-20 rounded-full bg-colorText p-3 lg:bottom-10 lg:right-10"
-    >
-      <DownloadIcon
-        width={30}
-        height={30}
-        className="fill-primary transition-opacity hover:opacity-60"
-      />
-    </button>
+    <div className="fixed bottom-5 right-5 z-20">
+      <Slide direction="up">
+        <button
+          onClick={onClick}
+          className="rounded-full bg-colorText p-3 hover:opacity-60 lg:bottom-10 lg:right-10"
+          title="Download PDF"
+        >
+          <DownloadIcon
+            width={30}
+            height={30}
+            className="fill-primary transition-opacity hover:opacity-60"
+          />
+        </button>
+      </Slide>
+    </div>
   );
 };
 

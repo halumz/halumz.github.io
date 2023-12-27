@@ -1,10 +1,11 @@
+import { useEffect, useRef, useState } from 'react';
+
 import Header from './components/Header';
-import { configuration } from './configs';
 import Configuration from './components/Configuration';
 import DownloadPdf from './components/DownloadPdf';
-import { useEffect, useRef, useState } from 'react';
-import { getLocalStorage, saveLocalStorage } from './utils/utility';
 import ThemeSwitcher from './components/ThemeSwitcher';
+import { getLocalStorage, saveLocalStorage } from './utils/utility';
+import { configuration } from './configs';
 
 function App() {
   const headerRef = useRef<HTMLDivElement>(null);

@@ -1,18 +1,18 @@
 import ConfigProps from '../models/ComfigProps';
 
-const ExternalLinkComponent = ({ ImageLink, link, title }: ConfigProps) =>
-  ImageLink && (
+const ExternalLinkComponent = ({ ImageComponent, link, title }: ConfigProps) =>
+  ImageComponent && (
     <a href={link} target="blank" title={title} className="py-10">
-      {typeof ImageLink === 'string' ? (
+      {typeof ImageComponent === 'string' ? (
         <img
           alt="#"
-          src={ImageLink}
-          className="w-[2.3rem] transition-opacity hover:opacity-60"
+          src={ImageComponent}
+          className="w-[2.1rem] transition-opacity hover:opacity-60"
         />
       ) : (
-        <ImageLink
-          width="2.3rem"
-          height="2.3rem"
+        <ImageComponent
+          width="2.1rem"
+          height="2.1rem"
           className="fill-colorText transition-opacity hover:opacity-60"
         />
       )}
