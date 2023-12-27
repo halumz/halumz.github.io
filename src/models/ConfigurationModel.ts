@@ -5,8 +5,8 @@ import ConfigProps from './ComfigProps';
 interface ConfigurationModel {
   value: string;
   title: string;
-  config: ConfigModel[];
-  ComponentName: FunctionComponent<ConfigProps>;
+  config: ConfigModel[]; // list of data for the component
+  ComponentName: FunctionComponent<ConfigProps>; // component name
   showBox?: boolean; // show box over the component
   showArrow?: boolean; // show arrow before the paragraph
   hideInApp?: boolean; // hide in app

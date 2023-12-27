@@ -60,6 +60,7 @@ button[title]:hover::after {
 }
 
 /* remove tap highlight on mobile */
-a {
+a,
+button {
   -webkit-tap-highlight-color: transparent;
 }
