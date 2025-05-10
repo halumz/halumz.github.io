@@ -16,7 +16,7 @@ import ConfigurationModel from '../models/ConfigurationModel';
 
 const myself = {
   name: 'Mashuk Sadman',
-  profession: 'Senior Software Engineer',
+  profession: 'Staff Software Engineer',
   address: 'Flat-b5, 85B/12A, Dhanmondi, Dhaka, BANGLADESH',
   phone: '+88 01726 634 711',
   email: 'mashuksadman@gmail.com',

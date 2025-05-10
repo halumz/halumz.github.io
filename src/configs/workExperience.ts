@@ -3,7 +3,7 @@ import ConfigModel from '../models/ConfigModel';
 const workExperience: ConfigModel[] = [
   {
     organization: 'Cefalo',
-    workRole: 'Senior Software Engineer',
+    workRole: 'Staff Software Engineer',
     details:
       'Working as a frontend consult with leading Norwegian newspaper agencies like "NTB" and "Mentor Medier". Develop graphics archiving web application. In frontend we mostly use react framework and spring boot is used in backend. Here I work with different technologies like amazon web services. We are implementing artificial intelligence using Amazon Rekognition.',
     period: 'November, 2018 - Present',
